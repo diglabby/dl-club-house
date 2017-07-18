@@ -1,0 +1,30 @@
+.main-header {
+	padding-left: 19.5%;
+	padding-right: 19.5%;
+	@include flexbox(row, center, space-between);
+	height: 75px;
+	.header-nav {
+		.header-nav__list {
+			@include flexbox(row, center, space-between);
+			li {
+				margin-left: 70px;
+				line-height: 24px;
+				&:first-child {
+					margin-left: 0;
+				}
+				.active-page {
+					position: relative;
+					&::after {
+						content: '';
+						display: block;
+						position: absolute;
+						width: 100%;
+						height: 13px;
+						background-color: $navActiveColor;
+						bottom: -26px;
+					}
+				}
+			}
+		}
+	}
+}
