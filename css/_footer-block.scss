@@ -20,6 +20,12 @@
           &:last-child {
             margin-bottom: 0;
           }
+          a {
+            transition: 0.5s;
+            &:hover {
+              color: invert($lightFontColor);
+            }
+          }
         }
       }
     }

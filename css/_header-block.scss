@@ -12,6 +12,12 @@
 				&:first-child {
 					margin-left: 0;
 				}
+				a {
+					transition: 0.5s;
+					&:hover {
+						color: darken($lightFontColor, 40%);
+					}
+				}
 				.active-page {
 					position: relative;
 					&::after {
@@ -22,6 +28,9 @@
 						height: 13px;
 						background-color: $navActiveColor;
 						bottom: -26px;
+					}
+					&:hover {
+						color: $darkFontColor;
 					}
 				}
 			}
