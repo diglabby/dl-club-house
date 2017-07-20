@@ -1162,3 +1162,89 @@
 		}
 	}
 }
+
+// News page
+.main-wrapper {
+
+	.news-block__1 {
+		height: 620px;
+		margin-bottom: 100px;
+		.block-1__h2 {
+			text-align: center;
+			@include font-size(48px);
+			line-height: 72px;
+		}
+	}
+
+	.news-block {
+		width: 1170px;
+		margin-bottom: 100px;
+		.news-block__top {
+			width: 100%;
+			@include flexbox(row, center, space-between);
+			margin-bottom: 55px;
+			.news-top__left {
+				@include flexbox(row);
+				.news-btn {
+					width: 110px;
+					height: 40px;
+					@include flexbox;
+					line-height: 24px;
+					border: 2px solid $btnColor;
+					margin-right: 45px;
+				}
+				.news-date {
+					position: relative;
+					color: $btnColor;
+					padding-left: 25px;
+					&::before {
+						content: '';
+						display: block;
+						position: absolute;
+						width: 20px;
+						height: 21px;
+						background-image: url('../img/news-calendar.svg');
+						left: -8px;
+						bottom: 0;
+					}
+				}
+			}
+			.news-top__right {
+				@include flexbox(row);
+				.news-social {
+					width: 235px;
+					height: 40px;
+					margin-left: 33px;
+					@include flexbox;
+					font-weight: 600;
+					color: $lightFontColor;
+					&:first-child {
+						margin-left: 0;
+					}
+				}
+				.social-fb {
+					background-color: $fbColor;
+				}
+				.social-vk {
+					background-color: $vkColor;
+				}
+			}
+		}
+
+		.news-block__main {
+			.news-block__text {
+				line-height: 24px;
+				margin-bottom: 55px;
+			}
+			.news-block__img {
+				margin-bottom: 50px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
+
+
+}
