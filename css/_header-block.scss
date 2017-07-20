@@ -13,25 +13,25 @@
 					margin-left: 0;
 				}
 				a {
-					transition: 0.5s;
-					&:hover {
-						color: darken($lightFontColor, 40%);
-					}
-				}
-				.active-page {
 					position: relative;
-					&::after {
+					transition: 0.5s;
+					&:hover::after {
 						content: '';
 						display: block;
 						position: absolute;
 						width: 100%;
 						height: 13px;
-						background-color: $navActiveColor;
+						background-color: $btnColor;
 						bottom: -26px;
 					}
-					&:hover {
-						color: $darkFontColor;
+					&:active::after {
+						background-color: $navActiveColor;
 					}
+				}
+				.active-page {
+					color: lighten($darkFontColor, 40%);
+					pointer-events: none;
+					cursor: default;
 				}
 			}
 		}

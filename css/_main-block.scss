@@ -392,6 +392,13 @@
 						line-height: 24px;
 						font-weight: 400;
 						margin-bottom: 20px;
+						cursor: pointer;
+						&:hover {
+							text-decoration: underline;
+						}
+						&:active {
+							text-decoration: underline;
+						}
 					}
 					.blogpost__datetime {
 						position: relative;
@@ -987,6 +994,168 @@
 					margin-right: 20px;
 					&:last-child {
 						margin-right: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+// History page
+.main-wrapper {
+
+	.history-block__1 {
+		width: 100%;
+		height: 335px;
+		@include flexbox(column, center, center);
+		background-image: url("../img/block-1_back.jpg");
+		color: $lightFontColor;
+		margin-bottom: 95px;
+		.history-1__text {
+			@include font-size(36px);
+			line-height: 24px;
+			margin-bottom: 35px;
+		}
+		.history-1__h2 {
+			@include font-size(80px);
+			text-transform: uppercase;
+			font-family: $miscFont;
+			letter-spacing: 5px;
+		}
+	}
+
+	.history-content__wrapper {
+		width: 100%;
+		background: -moz-linear-gradient(90deg, rgba(240,248,254,1) 0%, rgba(255,255,255,1) 100%); /* ff3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(100%, rgba(240,248,254,1))); /* safari4+,chrome */
+		background: -webkit-linear-gradient(90deg, rgba(240,248,254,1) 0%, rgba(255,255,255,1) 100%); /* safari5.1+,chrome10+ */
+		background: -o-linear-gradient(90deg, rgba(240,248,254,1) 0%, rgba(255,255,255,1) 100%); /* opera 11.10+ */
+		background: -ms-linear-gradient(90deg, rgba(240,248,254,1) 0%, rgba(255,255,255,1) 100%); /* ie10+ */
+		background: linear-gradient(0deg, rgba(240,248,254,1) 0%, rgba(255,255,255,1) 100%); /* w3c */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f0f8fe',GradientType=0 ); /* ie6-9 */
+		@include flexbox;
+
+		.history-block__2 {
+			margin-bottom: 100px;
+			.history-2__h2 {
+				text-align: center;
+				@include font-size(36px);
+				line-height: 30px;
+				margin-bottom: 70px;
+				font-family: $miscFont;
+				letter-spacing: 3px;
+			}
+			.history-2__list {
+				line-height: 24px;
+				padding-left: 40px;
+				li {
+					position: relative;
+					margin-bottom: 30px;
+					&:last-child {
+						margin-bottom: 0;
+					}
+					&::before {
+						content: '';
+						display: block;
+						position: absolute;
+						width: 15px;
+						height: 15px;
+						background-color: $btnColor;
+						left: -40px;
+						top: 5px;
+					}
+				}
+			}
+		}
+
+		.history-block__3 {
+			width: 1170px;
+			height: 660px;
+			background-image: url("../img/history-back.jpg");
+			background-size: cover;
+			margin-bottom: 95px;
+			@include flexbox;
+			.history-3__wrapper {
+				width: 970px;
+				height: 465px;
+				background-color: $lightFontColor;
+				padding-top: 70px;
+				padding-left: 100px;
+				.history-3__h2 {
+					padding-left: 190px;
+					@include font-size(36px);
+					line-height: 30px;
+					font-family: $miscFont;
+					margin-bottom: 60px;
+					letter-spacing: 3px;
+				}
+				.history-3__text {
+					line-height: 24px;
+					margin-bottom: 35px;
+				}
+				.history-3__list-wrapper {
+					width: 770px;
+					@include flexbox(row, flex-start, space-between);
+					flex-wrap: wrap;
+					.history-3__list {
+						padding-left: 10px;
+						li {
+							position: relative;
+							margin-bottom: 25px;
+							&:last-child {
+								margin-bottom: 0;
+							}
+							&::before {
+								content: '-';
+								display: block;
+								position: absolute;
+								left: -10px;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.history-block__4 {
+			margin-bottom: 110px;
+			.history-4__h2 {
+				text-align: center;
+				@include font-size(36px);
+				line-height: 30px;
+				margin-bottom: 80px;
+				font-family: $miscFont;
+				letter-spacing: 3px;
+			}
+			.history-4__wrapper {
+				width: 1170px;
+				@include flexbox(row, center, space-between);
+				.history-4__principle {
+					width: 270px;
+					height: 235px;
+					background-color: $lightFontColor;
+					box-shadow: 2px 2px 5px 0 #dee6eb;
+					@include flexbox;
+					cursor: default;
+					&:hover > .principle-visible {
+						display: none;
+					}
+					&:hover > .principle-invisible {
+						display: block;
+					}
+					.principle-visible {
+						@include font-size(24px);
+						line-height: 24px;
+						font-weight: bold;
+						color: $btnColor;
+						text-align: center;
+					}
+					.principle-invisible {
+						padding-left: 10px;
+						@include font-size(14px);
+						line-height: 24px;
+						font-weight: 300;
+						display: none;
 					}
 				}
 			}

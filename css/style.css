@@ -55,21 +55,22 @@ figure {
       .main-header .header-nav .header-nav__list li:first-child {
         margin-left: 0; }
       .main-header .header-nav .header-nav__list li a {
+        position: relative;
         transition: 0.5s; }
-        .main-header .header-nav .header-nav__list li a:hover {
-          color: #999999; }
-      .main-header .header-nav .header-nav__list li .active-page {
-        position: relative; }
-        .main-header .header-nav .header-nav__list li .active-page::after {
+        .main-header .header-nav .header-nav__list li a:hover::after {
           content: '';
           display: block;
           position: absolute;
           width: 100%;
           height: 13px;
-          background-color: #ba1c1c;
+          background-color: #efbf37;
           bottom: -26px; }
-        .main-header .header-nav .header-nav__list li .active-page:hover {
-          color: #3f4344; }
+        .main-header .header-nav .header-nav__list li a:active::after {
+          background-color: #ba1c1c; }
+      .main-header .header-nav .header-nav__list li .active-page {
+        color: #a4aaab;
+        pointer-events: none;
+        cursor: default; }
 
 .main-wrapper {
   display: flex;
@@ -469,7 +470,12 @@ figure {
           font-size: 1rem;
           line-height: 24px;
           font-weight: 400;
-          margin-bottom: 20px; }
+          margin-bottom: 20px;
+          cursor: pointer; }
+          .main-wrapper .wrapper-block__8 .block-8__wrapper .block-8__right .blogpost__text-wrapper .blogpost__title:hover {
+            text-decoration: underline; }
+          .main-wrapper .wrapper-block__8 .block-8__wrapper .block-8__right .blogpost__text-wrapper .blogpost__title:active {
+            text-decoration: underline; }
         .main-wrapper .wrapper-block__8 .block-8__wrapper .block-8__right .blogpost__text-wrapper .blogpost__datetime {
           position: relative;
           color: #808282;
@@ -990,6 +996,165 @@ figure {
           margin-right: 20px; }
           .partners-wrapper .partners-block__4 .partners-block__4-bottom .volunteer-photos img:last-child {
             margin-right: 0; }
+
+.main-wrapper .history-block__1 {
+  width: 100%;
+  height: 335px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../img/block-1_back.jpg");
+  color: #fff;
+  margin-bottom: 95px; }
+  .main-wrapper .history-block__1 .history-1__text {
+    font-size: 36px;
+    font-size: 2.25rem;
+    line-height: 24px;
+    margin-bottom: 35px; }
+  .main-wrapper .history-block__1 .history-1__h2 {
+    font-size: 80px;
+    font-size: 5rem;
+    text-transform: uppercase;
+    font-family: "RotondaC", Arial, sans-serif;
+    letter-spacing: 5px; }
+.main-wrapper .history-content__wrapper {
+  width: 100%;
+  background: -moz-linear-gradient(90deg, #f0f8fe 0%, white 100%);
+  /* ff3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(100%, #f0f8fe));
+  /* safari4+,chrome */
+  background: -webkit-linear-gradient(90deg, #f0f8fe 0%, white 100%);
+  /* safari5.1+,chrome10+ */
+  background: -o-linear-gradient(90deg, #f0f8fe 0%, white 100%);
+  /* opera 11.10+ */
+  background: -ms-linear-gradient(90deg, #f0f8fe 0%, white 100%);
+  /* ie10+ */
+  background: linear-gradient(0deg, #f0f8fe 0%, white 100%);
+  /* w3c */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f0f8fe',GradientType=0 );
+  /* ie6-9 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .main-wrapper .history-content__wrapper .history-block__2 {
+    margin-bottom: 100px; }
+    .main-wrapper .history-content__wrapper .history-block__2 .history-2__h2 {
+      text-align: center;
+      font-size: 36px;
+      font-size: 2.25rem;
+      line-height: 30px;
+      margin-bottom: 70px;
+      font-family: "RotondaC", Arial, sans-serif;
+      letter-spacing: 3px; }
+    .main-wrapper .history-content__wrapper .history-block__2 .history-2__list {
+      line-height: 24px;
+      padding-left: 40px; }
+      .main-wrapper .history-content__wrapper .history-block__2 .history-2__list li {
+        position: relative;
+        margin-bottom: 30px; }
+        .main-wrapper .history-content__wrapper .history-block__2 .history-2__list li:last-child {
+          margin-bottom: 0; }
+        .main-wrapper .history-content__wrapper .history-block__2 .history-2__list li::before {
+          content: '';
+          display: block;
+          position: absolute;
+          width: 15px;
+          height: 15px;
+          background-color: #efbf37;
+          left: -40px;
+          top: 5px; }
+  .main-wrapper .history-content__wrapper .history-block__3 {
+    width: 1170px;
+    height: 660px;
+    background-image: url("../img/history-back.jpg");
+    background-size: cover;
+    margin-bottom: 95px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    .main-wrapper .history-content__wrapper .history-block__3 .history-3__wrapper {
+      width: 970px;
+      height: 465px;
+      background-color: #fff;
+      padding-top: 70px;
+      padding-left: 100px; }
+      .main-wrapper .history-content__wrapper .history-block__3 .history-3__wrapper .history-3__h2 {
+        padding-left: 190px;
+        font-size: 36px;
+        font-size: 2.25rem;
+        line-height: 30px;
+        font-family: "RotondaC", Arial, sans-serif;
+        margin-bottom: 60px;
+        letter-spacing: 3px; }
+      .main-wrapper .history-content__wrapper .history-block__3 .history-3__wrapper .history-3__text {
+        line-height: 24px;
+        margin-bottom: 35px; }
+      .main-wrapper .history-content__wrapper .history-block__3 .history-3__wrapper .history-3__list-wrapper {
+        width: 770px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-wrap: wrap; }
+        .main-wrapper .history-content__wrapper .history-block__3 .history-3__wrapper .history-3__list-wrapper .history-3__list {
+          padding-left: 10px; }
+          .main-wrapper .history-content__wrapper .history-block__3 .history-3__wrapper .history-3__list-wrapper .history-3__list li {
+            position: relative;
+            margin-bottom: 25px; }
+            .main-wrapper .history-content__wrapper .history-block__3 .history-3__wrapper .history-3__list-wrapper .history-3__list li:last-child {
+              margin-bottom: 0; }
+            .main-wrapper .history-content__wrapper .history-block__3 .history-3__wrapper .history-3__list-wrapper .history-3__list li::before {
+              content: '-';
+              display: block;
+              position: absolute;
+              left: -10px; }
+  .main-wrapper .history-content__wrapper .history-block__4 {
+    margin-bottom: 110px; }
+    .main-wrapper .history-content__wrapper .history-block__4 .history-4__h2 {
+      text-align: center;
+      font-size: 36px;
+      font-size: 2.25rem;
+      line-height: 30px;
+      margin-bottom: 80px;
+      font-family: "RotondaC", Arial, sans-serif;
+      letter-spacing: 3px; }
+    .main-wrapper .history-content__wrapper .history-block__4 .history-4__wrapper {
+      width: 1170px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between; }
+      .main-wrapper .history-content__wrapper .history-block__4 .history-4__wrapper .history-4__principle {
+        width: 270px;
+        height: 235px;
+        background-color: #fff;
+        box-shadow: 2px 2px 5px 0 #dee6eb;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        cursor: default; }
+        .main-wrapper .history-content__wrapper .history-block__4 .history-4__wrapper .history-4__principle:hover > .principle-visible {
+          display: none; }
+        .main-wrapper .history-content__wrapper .history-block__4 .history-4__wrapper .history-4__principle:hover > .principle-invisible {
+          display: block; }
+        .main-wrapper .history-content__wrapper .history-block__4 .history-4__wrapper .history-4__principle .principle-visible {
+          font-size: 24px;
+          font-size: 1.5rem;
+          line-height: 24px;
+          font-weight: bold;
+          color: #efbf37;
+          text-align: center; }
+        .main-wrapper .history-content__wrapper .history-block__4 .history-4__wrapper .history-4__principle .principle-invisible {
+          padding-left: 10px;
+          font-size: 14px;
+          font-size: 0.875rem;
+          line-height: 24px;
+          font-weight: 300;
+          display: none; }
 
 .main-footer {
   width: 100%;
